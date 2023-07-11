@@ -49,7 +49,12 @@
             html2pdf()
                 .from(element)
                 .set(options)
-                .save();
+                .output('datauristring')
+                .then(function (pdfDataUri) {
+                    // Open the PDF in a new window or tab
+                    var downloadWindow = window.open();
+                    downloadWindow.document.write('<iframe src="' + pdfDataUri + '" style="width:100%; height:100%;" frameborder="0"></iframe>');
+                });
         }
     </script>
 </body>
