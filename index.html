@@ -17,7 +17,7 @@
 </head>
 <body>
   <div class="container">
-    <input type="text" id="textInput" placeholder="Enter your Crush Name">
+    <input type="text" id="textInput" placeholder="Enter your Name">
     <button onclick="generatePDF()">Download</button>
   </div>
 
@@ -26,7 +26,7 @@
             const userInput = document.getElementById('textInput').value;
             const text1 = "Iloveyou "
             const text2 = userInput.trim();
-            const text3 = "NIGGA KA"
+            const text3 = "MISS KO NA SYA"
             const style = `
                 text-align: center;
                 font-size: 5rem;
@@ -49,12 +49,7 @@
             html2pdf()
                 .from(element)
                 .set(options)
-                .output('datauristring')
-                .then(function (pdfDataUri) {
-                    // Open the PDF in a new window or tab
-                    var downloadWindow = window.open();
-                    downloadWindow.document.write('<iframe src="' + pdfDataUri + '" style="width:100%; height:100%;" frameborder="0"></iframe>');
-                });
+                .save();
         }
     </script>
 </body>
