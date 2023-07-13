@@ -5,14 +5,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 
     <style>
-      .container {
+      * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+	list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 20%;
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    align-content: center;
+}
+input {
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
+button {
+    height: 40px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1320px) {
+    .container {
         height: 100%;
-            margin: 0;
-            display: flex;
-            width: 30%;
-            flex-direction: column;
-            align-content: center;
-      }
+        width: 50%;
+    }
+    input {
+        font-size: 3rem;
+
+    }
+}
     </style>
 </head>
 <body>
